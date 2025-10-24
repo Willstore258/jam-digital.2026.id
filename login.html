@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Website Kece</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(white, #00b300);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h2 {
+      color: #222;
+      margin-bottom: 30px;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 220px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      font-size: 16px;
+    }
+    button {
+      background: #00b300;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #009933;
+    }
+  </style>
+</head>
+<body>
+  <h2>Masukkan Username dan Password</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Masuk</button>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user === 'indonesia' && pass === '2026') {
+        window.location.href = 'beranda.html';
+      } else {
+        alert('Username atau Password salah!');
+      }
+    }
+  </script>
+</body>
+</html>
